@@ -1,0 +1,15 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+
+@{ var selection = Model.Content.Site().Children.Where(x => x.IsVisible()); }
+
+@if (selection.Any())
+{
+    <ul class="menu">
+        @foreach (var item in selection)
+        {
+            <li class="@(item.IsAncestorOrSelf(Model.Content) ? "current" : null)">
+                <a href="@item.Url">@item.Name</a>
+            </li>
+        }
+    </ul>
+}

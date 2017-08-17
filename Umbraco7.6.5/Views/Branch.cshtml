@@ -1,0 +1,10 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+	Layout = "Master.cshtml";
+}
+
+@* the fun starts here *@
+@{Html.RenderPartial("Breadcrumb");}
+@Umbraco.Field("branchTitle")
+@Umbraco.Field("branchRTE")
+@Umbraco.Field("branchImage")

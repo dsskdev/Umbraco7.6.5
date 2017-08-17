@@ -505,6 +505,7 @@
     <Content Include="js\foundation.util.timer.js" />
     <Content Include="js\foundation.util.touch.js" />
     <Content Include="js\foundation.util.triggers.js" />
+    <Content Include="Media\1001\whisky_rs.jpg" />
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
     <None Include="scripts\jquery-3.0.0-vsdoc.js" />
@@ -678,6 +679,11 @@
     <Content Include="config\404handlers.config" />
     <Content Include="scripts\jquery-3.0.0.slim.min.map" />
     <Content Include="scripts\jquery-3.0.0.min.map" />
+    <Content Include="Views\Home.cshtml" />
+    <Content Include="Views\Partials\Main Navigation.cshtml" />
+    <Content Include="Views\Distillery.cshtml" />
+    <Content Include="Views\Branch.cshtml" />
+    <Content Include="Views\Master.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

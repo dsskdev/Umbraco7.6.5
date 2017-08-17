@@ -1,10 +1,25 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @{
-	Layout = "Master.cshtml";
+    Layout = "Master.cshtml";
 }
 
 @* the fun starts here *@
+@{Html.RenderPartial("Breadcrumb");}
 
 @Umbraco.Field("homeTitle")
 @Umbraco.Field("homeRTE")
-@Umbraco.Field("homeImage")
+
+
+@{
+        var media = Model.Content.GetPropertyValue<int>("homeImage");
+        var mediaItem = Umbraco.TypedMedia(media);
+        <div class="grid-x">
+
+                <div class="small-6 cell">
+
+                    <img src="@mediaItem.Url" />
+
+                </div>
+            </div>
+
+                }
