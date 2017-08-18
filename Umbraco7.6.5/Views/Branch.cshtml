@@ -1,10 +1,16 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @{
-	Layout = "Master.cshtml";
+    Layout = "Master.cshtml";
 }
 
 @* the fun starts here *@
 @{Html.RenderPartial("Breadcrumb");}
+@{Html.RenderPartial("Menu Child Pages"); }
 @Umbraco.Field("branchTitle")
 @Umbraco.Field("branchRTE")
-@Umbraco.Field("branchImage")
+
+
+@{
+    var image = Model.Content.GetPropertyValue<IPublishedContent>("branchImage");
+    <img src="@image.Url" />
+}

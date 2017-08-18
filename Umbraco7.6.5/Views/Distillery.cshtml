@@ -7,4 +7,9 @@
 
 @Umbraco.Field("distilleryTitle")
 @Umbraco.Field("distilleryRTE")
-@Umbraco.Field("distilleryImage")
+
+
+@{
+    var image = Model.Content.GetPropertyValue<IPublishedContent>("distilleryImage");
+    <img src="@image.Url" />
+}

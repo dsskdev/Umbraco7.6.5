@@ -7,17 +7,19 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
     <title>Foundation Starter Template</title>
-    <link href="~/dist/css/foundation.css" rel="stylesheet" />
+
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
 </head>
 <body>
-    <div class="grid-container">
+    <div class="container">
     @{Html.RenderPartial("Main Navigation");}
     @RenderBody()
     </div>
     <script src="~/scripts/jquery-3.0.0.js"></script>
-    <script src="~/dist/js/foundation.js"></script>
+    <script src="~/scripts/umd/popper.js"></script>
+    <script src="~/scripts/bootstrap.js"></script>
     <script src="~/scripts/custom.js"></script>
 </body>
 </html>

@@ -13,13 +13,12 @@
 @{
         var media = Model.Content.GetPropertyValue<int>("homeImage");
         var mediaItem = Umbraco.TypedMedia(media);
-        <div class="grid-x">
-
-                <div class="small-6 cell">
-
-                    <img src="@mediaItem.Url" />
-
-                </div>
+        <div class="row">
+            <div class="col">
+                <img class="img-fluid" src="@mediaItem.Url" />
             </div>
-
-                }
+            <div class="col">
+                <img class="img-fluid" src="@mediaItem.Url" />
+            </div>
+         </div>
+}

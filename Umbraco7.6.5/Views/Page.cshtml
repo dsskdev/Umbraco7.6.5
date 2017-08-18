@@ -1,0 +1,14 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+	Layout = "Master.cshtml";
+}
+
+@* the fun starts here *@
+@{Html.RenderPartial("Breadcrumb");}
+@Umbraco.Field("pageTitle")
+@Umbraco.Field("pageRTE")
+
+@{
+    var image = Model.Content.GetPropertyValue<IPublishedContent>("pageImage");
+    <img src="@image.Url" />
+}
